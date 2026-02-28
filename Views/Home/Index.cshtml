@@ -1,0 +1,54 @@
+﻿
+
+
+
+@{
+    ViewBag.Title = "Hoş Geldiniz";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold" style="color: #ff1493;">🌸 Adana Kafe Keşfi</h1>
+    <br /><br />
+
+          <div class="row g-4 justify-content-center">
+              <div class="col-md-5">
+                  <div class="p-4 border shadow-sm h-100" style="background: white; border-radius: 20px; border: 2px solid #ffb6c1 !important;">
+                      <h3 style="color: #d02090;">Nereye Gitsek?</h3>
+                      <p class="small text-muted">Tüm kafeleri listele, sana en uygun olanı seç.</p>
+                      <a href="/Cafe/List" class="btn btn-pink btn-lg px-5">Hemen Keşfet</a>
+                  </div>
+              </div>
+              <div class="col-md-5">
+                  <div class="p-4 border shadow-sm h-100" style="background: white; border-radius: 20px; border: 2px solid #ffb6c1 !important;">
+                      <h3 style="color: #d02090;">Mekanını Bul</h3>
+                      <p class="small text-muted">Kafe adını yaz, seni direkt menüsüne götürelim.</p>
+
+                      <form action="/Home/Index" method="get" class="mb-3">
+                          <div class="input-group">
+                              <input name="search" class="form-control border-danger-subtle" placeholder="Örn: Baraj Kafe..." style="border-radius: 20px 0 0 20px;">
+                              <button class="btn btn-pink" type="submit" style="border-radius: 0 20px 20px 0;">Ara</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-md-5">
+                  <div class="p-4 border shadow-sm h-100" style="background: white; border-radius: 20px; border: 2px solid #ffb6c1 !important;">
+                      <h3 style="color: #d02090;">Kategori Seç</h3>
+                      <div class="row g-2">
+                          <div class="col-6">
+                              <a href="/Cafe/List?category=Student" class="btn btn-outline-danger w-100 rounded-pill small">🎓 Öğrenci</a>
+                          </div>
+                          <div class="col-6">
+                              <a href="/Cafe/List?category=Working" class="btn btn-outline-danger w-100 rounded-pill small">💻 Çalışma</a>
+                          </div>
+                          <div class="col-6">
+                              <a href="/Cafe/List?category=Family" class="btn btn-outline-danger w-100 rounded-pill small">👨‍👩‍👧‍👦 Aile</a>
+                          </div>
+                          <div class="col-6">
+                              <a href="/Cafe/List?category=Fun" class="btn btn-outline-danger w-100 rounded-pill small">🎉 Eğlence</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+</div>

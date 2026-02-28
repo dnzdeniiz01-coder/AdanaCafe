@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AdanaCafe.Models.Menu>
+@{
+    ViewBag.Title = "Menü";
+}
+
+<div class="text-center">
+    <h2 style="color: #d02090;">☕ @ViewBag.CafeName</h2>
+    <p class="text-muted">En taze lezzetler aşağıda!</p>
+    <a href="/Cafe/List" class="text-decoration-none">← Kafelere Geri Dön</a>
+</div>
+
+<hr />
+
+<div class="list-group shadow-sm">
+    @foreach (var item in Model)
+    {
+        <div class="list-group-item d-flex justify-content-between align-items-center" style="background: rgba(255, 240, 245, 0.5);">
+            <div>
+                <strong style="color: #c71585;">@item.ItemName</strong>
+                <br /><small class="text-muted">@item.Category</small>
+            </div>
+            <span class="badge bg-danger rounded-pill">@item.Price ₺</span>
+        </div>
+    }
+</div>
